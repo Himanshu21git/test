@@ -3,8 +3,6 @@
 // Given an array of numbers, use Array methods to find the sum of all even numbers in the array.
 function sumEvenNumbers(arr) {
   // Your code here
-  let res = 0
-  return arr.filter(a=> a%2===0).reduce((res,el)=> {return res+el;})
 }
 
 // Task 2: Object Methods
@@ -13,34 +11,21 @@ function sumEvenNumbers(arr) {
 // Add a method 'introduce' that returns a string introducing the person.
 const person = {
   // Your code here
-  'name' : 'Aman',
-  'age':222,
-  'job':'Trainee',
-  introduce:function(){
-    return `Hi, I'm ${this.name} ${this.age} old and I'm a ${this.job} `;
-  }
 };
 
 // Task 3: Lambda Functions
 
 // Write a lambda function (arrow function) that takes two parameters and returns their sum.
-const add = (a, b) => a+b;
+const add = (a, b) => {
+  // Your code here
+};
 
 // Task 4: Promises, Async, and Await
 
 // Write an async function called 'fetchData' that fetches data from a given URL using fetch.
 // Handle any errors that may occur during the fetch using try-catch and return the data as JSON.
 async function fetchData(url) {
-  try{
-    const data = await fetch(url)
-    if(!data.ok){
-      throw new Error('Data Error');
-    }
-    const res = await data.json();
-    return res;
-  }catch(err){
-    console.log(err);
-  }
+  // Your code here
 }
 
 // Task 5: Functional Programming
@@ -49,7 +34,6 @@ async function fetchData(url) {
 // the squares of the positive numbers in the original array, using functional programming concepts.
 function squarePositiveNumbers(arr) {
   // Your code here
-  return arr.filter((a)=>a>=0).map((a)=> a*a)
 }
 
 // Test Cases
@@ -70,4 +54,3 @@ fetchData('https://jsonplaceholder.typicode.com/posts/1')
 
 // Task 5 Test
 console.log(squarePositiveNumbers([1, -2, 3, -4, 5])); // Expected output: [1, 9, 25]
-
