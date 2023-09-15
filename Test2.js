@@ -4,11 +4,6 @@
 // Each book object has properties: title (string) and rating (number).
 function averageRating(books) {
   // Your code here
-  let totalRat = 0;
-  const size = books.length;
-  books.map(({title,rating})=> totalRat+=rating);
-  return totalRat/size;
-  
 }
 
 // Task 2: Object Methods
@@ -16,18 +11,7 @@ function averageRating(books) {
 // Create a class called 'Product' with properties 'name', 'price', and 'quantity'.
 // Add methods to calculate the total price (price * quantity) and to display product information.
 class Product {
-  // Your code her
-  constructor(name, price, quantity){
-    this.name = name ;
-    this.price = price ;
-    this.quantity=  quantity;
-  }
-  getTotalPrice(){
-    return  `output: ${this.price*this.quantity}`
-  }
-  displayInfo(){
-    return `"Product: ${this.name}, Price: $${this.price}, Quantity: ${this.quantity}"`;
-  }
+  // Your code here
 }
 
 // Task 3: Lambda Functions
@@ -36,7 +20,6 @@ class Product {
 // The callback function should be applied to each number in the array, and the result should be returned in a new array.
 function applyCallback(arr, callback) {
   // Your code here
-  return arr.map(el=> callback(el))
 }
 
 // Task 4: Promises, Async, and Await
@@ -45,16 +28,6 @@ function applyCallback(arr, callback) {
 // The function should accept an array of URLs and return an array of JSON responses.
 async function fetchMultipleData(urls) {
   // Your code here
-  try{
-    const responses  = Promise.all(urls.map(url=> fetch(url)));
-    for(let response in responses){
-      if(!response.ok){
-        throw new Error('Eroro');
-      }
-    }
-  }catch(err){
-    console.log(err);
-  }
 }
 
 // Task 5: Functional Programming
@@ -63,15 +36,6 @@ async function fetchMultipleData(urls) {
 // Then, calculate the average score of the passing students using functional programming concepts.
 function averagePassingScore(students) {
   // Your code here
-  let totalScore = 0;
-  let size = 0;
-  students.map(({name,score})=>{
-    if(score>=60){
-      totalScore+=score;
-      size+=1;
-    }
-  });
-  return totalScore/size;
 }
 
 // Test Cases
