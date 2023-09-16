@@ -23,13 +23,10 @@ function calculateArea(radius, pi) {
 // Observe how TypeScript performs static type checking.
 age = true /* Your code here */;
 // Task 9: Create an object 'circle' that has a 'name' property.
-var circle;
-(function (s) { return ; }); /* Your code here */
-{
-    return s.name;
+var circle /* Your code here */ = {
+    name: 'Aman'
     /* Your code here */
-}
-;
+};
 // Task 10: Create a function 'printShapeName' that takes a parameter 'shape' of type 'Shape'.
 // The function should print the 'name' property of the 'shape' object.
 function printShapeName(shape) {

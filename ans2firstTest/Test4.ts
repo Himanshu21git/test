@@ -1,7 +1,7 @@
 // Topic 1: Type Casting and Inference
 
 // Task 1: Define a variable 'age' with an inferred type of number and assign it the value 25.
-let age:unknown = 25;
+let age:number = 25;
 
 // Task 2: Cast the variable 'age' to a string type and store it in a variable 'ageStr'.
 let ageStr:string= age as string;
@@ -10,7 +10,7 @@ let ageStr:string= age as string;
 
 // Task 3: Create a variable 'person' with an explicit type definition.
 // The person object should have properties 'name' (string) and 'age' (number).
-let person: /* Your code here */ = {
+let person: object= {
   name:string,
   age:number
   // Your code here
@@ -57,8 +57,8 @@ interface Shape {
 }
 
 // Task 9: Create an object 'circle' that has a 'name' property.
-const circle(s:Shape):/* Your code here */ = {
-  return s.name;
+const circle:Shape/* Your code here */ = {
+  name:'Aman'
   /* Your code here */
 };
 
