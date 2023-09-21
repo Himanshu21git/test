@@ -46,7 +46,7 @@ type PersonWithAddress = {
 // Task 7: Attempt to assign a boolean value 'true' to the variable 'age'.
 // Observe how TypeScript performs static type checking.
 
-age = true as unknown/* Your code here */;
+age = true as string/* Your code here */;
 
 // Topic 5: Structural Typing
 
@@ -87,12 +87,10 @@ function printExtendedAddress(personWithAddress) {
 
 // Task 12: Create a utility type 'Nullable' that takes a type parameter and makes it nullable.
 // For example, if you pass 'string' to 'Nullable', it should return 'string | null'.
-type Nullable<T> = {
-  
-}/* Your code here  */;
+type Nullable<T> = {parameter: T|null} /* Your code here  */;
 
 // Task 13: Use the 'Nullable' utility type to define a variable 'nullableName' that can be a string or null.
-let nullableName: <T>(arg:T)=> T=Nullable;  /* Your code here */;
+let nullableName: Nullable<string>;  /* Your code here */;
 
 // Task 14: Create a function 'getLength' that takes a parameter 'input' of type 'string | string[]'.
 // Inside the function, use type manipulation to determine if 'input' is a string or an array of strings.
@@ -106,8 +104,7 @@ function getLength(input:string |object):number/* Your code here */ {
       len+= (typeof el==='string')?el.length : (el as string).length
     },0)
   }
-  
-}
+
 
 // Task 15: Define a type 'KeyValuePair' that represents a key-value pair.
 // The type should have two properties: 'key' of type string and 'value' of type T (a type parameter).
@@ -127,5 +124,5 @@ const personData: KeyValuePair<String>= {
 // and 'key' of type string. The function should return the 'value' corresponding to the given 'key'.
 function getValueByKey<T>(data:T[],key:string): /* Your code here */ {
   // Your code here
-  return data[key];
+  return data.key;
 }

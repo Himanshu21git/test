@@ -47,7 +47,7 @@ function printExtendedAddress(personWithAddress) {
     }
 }
 // Task 13: Use the 'Nullable' utility type to define a variable 'nullableName' that can be a string or null.
-var nullableName = Nullable; /* Your code here */
+var nullableName; /* Your code here */
 ;
 // Task 14: Create a function 'getLength' that takes a parameter 'input' of type 'string | string[]'.
 // Inside the function, use type manipulation to determine if 'input' is a string or an array of strings.
@@ -62,12 +62,12 @@ function getLength(input) {
             len += (typeof el === 'string') ? el.length : el.length;
         }, 0);
     }
+    // Task 16: Create an object 'personData' that contains a key-value pair with 'key' as 'name' and 'value' as 'John'.
+    var personData = {
+        /* Your code here */
+        key: "Name",
+        value: "John"
+    };
+    // Your code here
+    return data.key;
 }
-// Task 16: Create an object 'personData' that contains a key-value pair with 'key' as 'name' and 'value' as 'John'.
-var personData = {
-    /* Your code here */
-    key: "Name",
-    value: "John"
-};
-// Your code here
-return data[key];
