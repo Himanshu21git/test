@@ -8,7 +8,7 @@ let ageStr:string= age as string;
 
 // Topic 2: Explicit Types
 
-// Task 3: Create a variable 'person' with an explicit type definition.
+// Task 3: Create a variable 'person' with an explicit type definition.  
 // The person object should have properties 'name' (string) and 'age' (number).
 let person: object= {
   name:string,
@@ -117,8 +117,10 @@ type KeyValuePair<T> = {
 }/* Your code here */;
 
 // Task 16: Create an object 'personData' that contains a key-value pair with 'key' as 'name' and 'value' as 'John'.
-const personData: /* Your code here */ = {
+const personData: KeyValuePair<String>= {
   /* Your code here */
+  key:"Name",
+  value:"John"
 };
 
 // Task 17: Create a function 'getValueByKey' that takes two parameters: 'data' of type 'T[]' (an array of KeyValuePair)
