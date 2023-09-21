@@ -4,7 +4,7 @@ var age = 25;
 // Task 2: Cast the variable 'age' to a string type and store it in a variable 'ageStr'.
 var ageStr = age;
 // Topic 2: Explicit Types
-// Task 3: Create a variable 'person' with an explicit type definition.
+// Task 3: Create a variable 'person' with an explicit type definition.  
 // The person object should have properties 'name' (string) and 'age' (number).
 var person = {
     name: string,
@@ -65,7 +65,9 @@ function getLength(input) {
 }
 // Task 16: Create an object 'personData' that contains a key-value pair with 'key' as 'name' and 'value' as 'John'.
 var personData = {
-/* Your code here */
+    /* Your code here */
+    key: "Name",
+    value: "John"
 };
 // Your code here
 return data[key];
