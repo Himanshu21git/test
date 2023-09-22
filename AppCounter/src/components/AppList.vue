@@ -14,7 +14,7 @@
 import { ref, defineProps } from 'vue';
 const props = defineProps(['items'])
 const items = props.items
-console.log(items);
+// console.log(items);
 const show = ref(false)
 
 </script>

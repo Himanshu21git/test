@@ -9,13 +9,13 @@
  import { defineProps } from 'vue';
   const props = defineProps(['pass'])
   const data = props.pass
-  console.log(data);
+  // console.log(data);
 
 
   const emits = defineEmits(['childA']);
   const send = () => {
   let nm = (props.pass.length)
-  console.log(nm)
+  // console.log(nm)
   emits('childA', nm);
 };
 
