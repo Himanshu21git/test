@@ -2,8 +2,12 @@
 
 // Given an array of numbers, use Array methods to find the sum of all even numbers in the array.
 function sumEvenNumbers(arr) {
-    let sum =arr.filter(e=>e%2===0).reduce((e,s)=> e+s)
-    return sum
+  return arr.reduce((e,v) => {if(v%2==0) {
+    e  = v
+    return(e +v)
+  }
+    
+  })
   }
   
   // Task 2: Object Methods
@@ -24,9 +28,7 @@ function sumEvenNumbers(arr) {
   // Task 3: Lambda Functions
   
   // Write a lambda function (arrow function) that takes two parameters and returns their sum.
-  const add = (a, b) => {
-    return a + b;
-  };
+  const add = (a, b) => a + b;
   
   // Task 4: Promises, Async, and Await
   
@@ -41,7 +43,7 @@ function sumEvenNumbers(arr) {
   
   }
     
-    catch{
+    catch(error){
    throw new error ('error')
     }
   }

@@ -45,7 +45,17 @@ function averageRating(books) {
   // Create an async function called 'fetchMultipleData' that fetches data from multiple URLs concurrently using Promise.all.
   // The function should accept an array of URLs and return an array of JSON responses.
   async function fetchMultipleData(urls) {
-    
+    try {
+      const responses = await Promise.all(
+        urls.map(async (url) => {
+          const response = await fetch(url);
+          return response.json();
+        })
+      );
+      return responses;
+    } catch (error) {
+      throw new Error(`One or more requests failed`);
+    }
   }
   
   // Task 5: Functional Programming
