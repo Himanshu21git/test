@@ -10,6 +10,7 @@ function averageRating(books) {
     return totalRat/size;
     
   }
+  // ! Score: 1.5
   
   // Task 2: Object Methods
   
@@ -29,6 +30,7 @@ function averageRating(books) {
       return `"Product: ${this.name}, Price: $${this.price}, Quantity: ${this.quantity}"`;
     }
   }
+  // ! Score: 2
   
   // Task 3: Lambda Functions
   
@@ -38,6 +40,7 @@ function averageRating(books) {
     // Your code here
     return arr.map(el=> callback(el))
   }
+  // ! Score: 2
   
   // Task 4: Promises, Async, and Await
   
@@ -56,6 +59,7 @@ function averageRating(books) {
       console.log(err);
     }
   }
+  // ! Score: 0
   
   // Task 5: Functional Programming
   
@@ -73,6 +77,7 @@ function averageRating(books) {
     });
     return totalScore/size;
   }
+    // ! Score: 1
   
   // Test Cases
   

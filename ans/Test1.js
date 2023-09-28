@@ -1,10 +1,11 @@
 // Task 1: Array Methods
-
+// ? Each task of 2 marks
 // Given an array of numbers, use Array methods to find the sum of all even numbers in the array.
 function sumEvenNumbers(arr) {
     let sum =arr.filter(e=>e%2===0).reduce((e,s)=> e+s)
     return sum
   }
+  // ! Score: 1
   
   // Task 2: Object Methods
   
@@ -18,6 +19,7 @@ function sumEvenNumbers(arr) {
       return `Hi, I'm ${person.name}, I'm ${person.age} years old, and I work as a ${person.job}.`;
     }
   };
+   // ! Score: 2
   
   
   
@@ -27,6 +29,7 @@ function sumEvenNumbers(arr) {
   const add = (a, b) => {
     return a + b;
   };
+    // ! Score: 1.5
   
   // Task 4: Promises, Async, and Await
   
@@ -45,6 +48,7 @@ function sumEvenNumbers(arr) {
    throw new error ('error')
     }
   }
+  // ! Score: 0
   
   
   // Task 5: Functional Programming
@@ -54,6 +58,8 @@ function sumEvenNumbers(arr) {
   function squarePositiveNumbers(arr) {
     return arr.filter(e=>e>0).map(e=>e*e)
   }
+
+  // ! Score: 1
   
   // Test Cases
   
