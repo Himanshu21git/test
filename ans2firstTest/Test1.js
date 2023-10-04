@@ -6,6 +6,7 @@ function sumEvenNumbers(arr) {
     let res = 0
     return arr.filter(a=> a%2===0).reduce((res,el)=> {return res+el;})
   }
+  // ! Score: 1
   
   // Task 2: Object Methods
   
@@ -20,11 +21,14 @@ function sumEvenNumbers(arr) {
       return `Hi, I'm ${this.name} ${this.age} old and I'm a ${this.job} `;
     }
   };
+    // ! Score: 2
   
   // Task 3: Lambda Functions
   
   // Write a lambda function (arrow function) that takes two parameters and returns their sum.
   const add = (a, b) => a+b;
+    // ! Score: 2
+
   
   // Task 4: Promises, Async, and Await
   
@@ -42,6 +46,7 @@ function sumEvenNumbers(arr) {
       console.log(err);
     }
   }
+  // ! Score: 1
   
   // Task 5: Functional Programming
   
@@ -51,6 +56,7 @@ function sumEvenNumbers(arr) {
     // Your code here
     return arr.filter((a)=>a>=0).map((a)=> a*a)
   }
+  // ! Score: 1
   
   // Test Cases
   

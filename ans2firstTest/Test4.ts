@@ -2,9 +2,11 @@
 
 // Task 1: Define a variable 'age' with an inferred type of number and assign it the value 25.
 let age:number = 25;
+// ! Score: 0
 
 // Task 2: Cast the variable 'age' to a string type and store it in a variable 'ageStr'.
 let ageStr:string= age as string;
+// ! Score: 0.5
 
 // Topic 2: Explicit Types
 
@@ -15,6 +17,8 @@ let person: object= {
   age:number
   // Your code here
 };
+// ! Score: 0
+
 
 // Task 4: Create a function 'calculateArea' that takes two parameters:
 // 'radius' (number) and 'pi' (number).
@@ -23,6 +27,7 @@ function calculateArea(radius:number, pi:number): number/* Your code here */ {
   // Your code herer
   return (pi*radius*radius)
 }
+// ! Score: 1
 
 // Topic 3: Types Composition
 
@@ -33,6 +38,7 @@ type Address = /* Your code here */{
   city:string,
   zipcode:string,
 };
+// ! Score: 1
 
 // Task 6: Create a type 'PersonWithAddress' by combining the 'person' and 'Address' types.
 type PersonWithAddress = {
@@ -40,6 +46,7 @@ type PersonWithAddress = {
   
 
 }/* Your code here */;
+// ! Score: 0
 
 // Topic 4: Static Type Checking
 
@@ -47,6 +54,7 @@ type PersonWithAddress = {
 // Observe how TypeScript performs static type checking.
 
 age = true as unknown/* Your code here */;
+// ! Score: 0
 
 // Topic 5: Structural Typing
 
@@ -55,12 +63,14 @@ interface Shape {
   name:string
   /* Your code here */
 }
+// ! Score: 1
 
 // Task 9: Create an object 'circle' that has a 'name' property.
 const circle:Shape/* Your code here */ = {
   name:'Aman'
   /* Your code here */
 };
+// ! Score: 1
 
 // Task 10: Create a function 'printShapeName' that takes a parameter 'shape' of type 'Shape'.
 // The function should print the 'name' property of the 'shape' object.
@@ -68,6 +78,7 @@ function printShapeName( shape:Shape) {
   // Your code here
   return shape.name;
 }
+// ! Score: 1
 
 // Topic 6: Type Narrowing
 
@@ -82,6 +93,7 @@ function printExtendedAddress(personWithAddress) {
     console.log("NO extended address")
   }
 }
+// ! Score: 0.5
 
 // Topic 7: Type Manipulation
 
@@ -90,9 +102,11 @@ function printExtendedAddress(personWithAddress) {
 type Nullable<T> = {
   
 }/* Your code here  */;
+// ! Score: 0
 
 // Task 13: Use the 'Nullable' utility type to define a variable 'nullableName' that can be a string or null.
 let nullableName: <T>(arg:T)=> T=Nullable;  /* Your code here */;
+// ! Score: 0
 
 // Task 14: Create a function 'getLength' that takes a parameter 'input' of type 'string | string[]'.
 // Inside the function, use type manipulation to determine if 'input' is a string or an array of strings.
@@ -108,6 +122,7 @@ function getLength(input:string |object):number/* Your code here */ {
   }
   
 }
+// ! Score: 0.5
 
 // Task 15: Define a type 'KeyValuePair' that represents a key-value pair.
 // The type should have two properties: 'key' of type string and 'value' of type T (a type parameter).
@@ -115,11 +130,13 @@ type KeyValuePair<T> = {
   key:string,
   value:T
 }/* Your code here */;
+// ! Score: 1
 
 // Task 16: Create an object 'personData' that contains a key-value pair with 'key' as 'name' and 'value' as 'John'.
 const personData: /* Your code here */ = {
   /* Your code here */
 };
+// ! Score: 0
 
 // Task 17: Create a function 'getValueByKey' that takes two parameters: 'data' of type 'T[]' (an array of KeyValuePair)
 // and 'key' of type string. The function should return the 'value' corresponding to the given 'key'.
@@ -127,3 +144,4 @@ function getValueByKey<T>(data:T[],key:string): /* Your code here */ {
   // Your code here
   return data[key];
 }
+// ! Score: 0.5

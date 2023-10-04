@@ -1,4 +1,5 @@
 // Task 1: Interfaces
+// ? Each task of 2 marks
 
 // Create an interface called 'Person' with properties 'name' (string) and 'age' (number).
 interface Person {
@@ -6,6 +7,7 @@ interface Person {
   name:string,
   age:number
 }
+// ! Score: 2
 
 // Task 2: Types
 
@@ -13,17 +15,19 @@ interface Person {
 type Point = {
   // Your code here
   x:number,
-  y:number;
+  y:number,
 };
+// ! Score: 2
 
 // Task 3: Never Type
 
 // Write a function 'throwError' that takes a message (string) and never returns.
 function throwError(message: string): never {
   // Your code here
-  throw new Error ('This is an error');
+  throw new Error('This is an error');
   
 }
+// ! Score: 2
 
 // Task 4: Unknown
 
@@ -35,6 +39,7 @@ function parseJSON(jsonString: string): unknown {
     return jsonString
   }else return `'undefined (due to 'unknown' type)'`
 }
+// ! Score: 1
 
 // Task 5: Any
 
@@ -44,6 +49,7 @@ function add(a: any, b: any): any {
   // Your code here
   return a+b
 }
+// ! Score: 2
 
 // Test Cases
 

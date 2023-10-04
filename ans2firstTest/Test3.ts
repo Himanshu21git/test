@@ -6,6 +6,7 @@ interface Person {
   name:string,
   age: number
 }
+  // ! Score: 1.5
 
 // Task 2: Types
 
@@ -15,6 +16,7 @@ type Point = {
   x:number,
   y:number
 };
+  // ! Score: 2
 
 // Task 3: Never Type
 
@@ -23,6 +25,7 @@ function throwError(message: string):never {
   // Your code here
    throw new Error('hmm')
 }
+  // ! Score: 2
 
 // Task 4: Unknown
 
@@ -37,7 +40,7 @@ function parseJSON(jsonString: unknown): unknown {
     const data:unknown= JSON.parse(jsonString)
   return data;
 }
-
+  // ! Score: 2
 // Task 5: Any
 
 // Create a function 'add' that takes two parameters of any type and returns their sum.
@@ -47,6 +50,7 @@ function add(a: any, b: any): any {
   let c:any=a+b;
   return c;
 }
+  // ! Score: 2
 
 // Test Cases
 
