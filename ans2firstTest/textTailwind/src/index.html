@@ -1,0 +1,73 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="/dist/output.css" rel="stylesheet">
+</head>
+<body class="dark:text-white dark:bg-slate-800 bg-blue-300 items-center justify-between flex-wrap">
+    <nav class="bg-gray-800">
+        <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+          <div class="relative flex h-16 items-center justify-between">
+            <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
+              <div class="hidden sm:ml-6 sm:block">
+                <div class="flex space-x-4 text-white uppercase">
+                 Tailwind css Test
+                </div>
+              </div>
+            </div>
+            <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+              <div class="relative ml-3">
+                <div>
+                  <button type="button" class="uppercase text-white rounded-md bg-gray-500 hover:bg-white hover:text-gray-500" onclick="darkTheme()">
+                          Change Theme             
+                  </button>
+                </div>
+               </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      
+
+<!-- Working Above -->
+   <p class=" ml-20 p-2 uppercase">Tailwind Test Tasks Executing One By One</p>
+    <!-- Components -->
+    <p class="custom uppercase ml-20" > Card Component</p>
+    <div class="flex p-10">
+        <div class="w-40 h-75 mr-10 bg-white shadow-full shadow-black mr-1o dark:bg-gray-800 dark:text-white rounded-md">
+            <img class="w-50 h-50 rounded-lg" src="footbear.jpg" alt="footwear"/>
+            <b>Puma Casual Shoes</b>
+        <p class="text-sm"> Running Shoes, balanced soul for multi-purpose</p>
+        Price: <b class="text-red-500">$149</b><br/>
+       <p class=" flex text-sm items-left "> 
+        <button class="bg-yellow-300 p-1 uppercase rounded-md mr-2 dark:text-black"> Add to Cart</button >
+            <button class="rounded-md uppercase bg-yellow-500 p-1 dark:text-black">Buy This Now</button></p>
+        </div>
+        <div class="w-40 h-75 ml-10 mr-10 bg-white shadow-full shadow-black mr-1o dark:bg-gray-800 dark:text-white rounded-md">
+            <img class="w-50 h-50 rounded-lg" src="footbear.jpg" alt="footwear"/>
+            <b>Puma Casual Shoes</b>
+        <p class="text-sm"> Running Shoes, balanced soul for multi-purpose</p>
+        Price: <b class="text-red-500">$149</b><br/>
+       <p class=" flex text-sm items-left "> 
+        <button class="bg-yellow-300 p-1 uppercase rounded-md mr-2 dark:text-black"> Add to Cart</button >
+            <button class="rounded-md uppercase bg-yellow-500 p-1 dark:text-black">Buy This Now</button></p>
+        </div>
+        <div class="w-40 h-75 ml-10 mr-10 bg-white shadow-full shadow-black mr-1o dark:bg-gray-800 dark:text-white rounded-md">
+            <img class="w-50 h-50 rounded-lg" src="footbear.jpg" alt="footwear"/>
+            <b>Puma Casual Shoes</b>
+        <p class="text-sm"> Running Shoes, balanced soul for multi-purpose</p>
+        Price: <b class="text-red-500">$149</b><br/>
+       <p class=" flex text-sm items-left "> 
+        <button class="bg-yellow-300 p-1 uppercase rounded-md mr-2 dark:text-black"> Add to Cart</button >
+            <button class="rounded-md uppercase bg-yellow-500 p-1 dark:text-black">Buy This Now</button></p>
+        </div>
+    </div>
+</body>
+<script>
+    function darkTheme(){
+        
+       document.documentElement.classList.toggle('dark');
+    }
+</script>
+</html>
