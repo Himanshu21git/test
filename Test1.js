@@ -2,7 +2,13 @@
 
 // Given an array of numbers, use Array methods to find the sum of all even numbers in the array.
 function sumEvenNumbers(arr) {
-  // Your code here
+ return arr.reduce( (sum , currentValue) => {
+
+    if( currentValue %2 === 0 ){``
+      return sum += currentValue;
+    }
+    return sum += 0;
+  } , 0 )
 }
 
 // Task 2: Object Methods
@@ -10,22 +16,32 @@ function sumEvenNumbers(arr) {
 // Create an object called 'person' with properties 'name', 'age', and 'job'.
 // Add a method 'introduce' that returns a string introducing the person.
 const person = {
-  // Your code here
+  name : "Rajnish Kumar",
+  age : 18,
+  job : "Devloper",
+
+  introduce : function(){
+    return `Hi, I'm ${this.name}, I'm ${this.age} years old, and I work as a ${this.job}.`
+  }
 };
 
 // Task 3: Lambda Functions
 
 // Write a lambda function (arrow function) that takes two parameters and returns their sum.
-const add = (a, b) => {
-  // Your code here
-};
+const add = (a, b) => a + b ;
 
 // Task 4: Promises, Async, and Await
 
 // Write an async function called 'fetchData' that fetches data from a given URL using fetch.
 // Handle any errors that may occur during the fetch using try-catch and return the data as JSON.
 async function fetchData(url) {
-  // Your code here
+  try {
+
+    return ( await fetch( url ) ).json();
+
+  } catch (error) {
+    console.error( error )
+  }
 }
 
 // Task 5: Functional Programming
@@ -33,7 +49,9 @@ async function fetchData(url) {
 // Given an array of numbers, write a function that returns a new array containing
 // the squares of the positive numbers in the original array, using functional programming concepts.
 function squarePositiveNumbers(arr) {
-  // Your code here
+
+  return arr.filter( value => value >= 0).map( value => value * value );
+
 }
 
 // Test Cases
