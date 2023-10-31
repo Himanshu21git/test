@@ -56,7 +56,7 @@ async function fetchMultipleData(urls) {
 // Then, calculate the average score of the passing students using functional programming concepts.
 function averagePassingScore(students) {
   const passStd = students.filter( (marks)=> marks.score >= 60);
-  const avgMarks = 
+  //const avgMarks = 
 }
 
 // Test Cases
