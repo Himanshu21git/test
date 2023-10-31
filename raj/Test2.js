@@ -28,7 +28,7 @@ class Product {
 // Task 3: Lambda Functions
 
 // Write a function that takes an array of numbers and a callback function.
-// The callback function should be applied to each number in the array, and the result should be returned in a new array.
+// The callback function should be applied to each number in the array, and the result should be returned in a new0 array.
 function applyCallback(arr, callback) {
   return arr.map( (value) => callback( value ));
 }
