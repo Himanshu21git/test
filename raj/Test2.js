@@ -3,7 +3,8 @@
 // Given an array of objects representing books, find the average rating of all books in the array.
 // Each book object has properties: title (string) and rating (number).
 function averageRating(books) {
-  // Your code here
+  const result = books.reduce( (sum , rate) =>  sum += rate.rating , 0 )
+  return result / books.length ;
 }
 
 // Task 2: Object Methods
@@ -11,15 +12,26 @@ function averageRating(books) {
 // Create a class called 'Product' with properties 'name', 'price', and 'quantity'.
 // Add methods to calculate the total price (price * quantity) and to display product information.
 class Product {
-  // Your code here
+  constructor(name, price, quantity){
+    this.name = name;
+    this.price = price;
+    this.quantity = quantity;
+  }
+  getTotalPrice(){
+    return this.price * this.quantity;
+  }
+  displayInfo(){
+    return `Product: ${this.name}, Price: $${this.price}, Quantity: ${this.quantity}`;
+  }
 }
 
 // Task 3: Lambda Functions
 
 // Write a function that takes an array of numbers and a callback function.
-// The callback function should be applied to each number in the array, and the result should be returned in a new array.
+// The callback function should be applied to each number in the array, and the result should be returned in a new0 array.
 function applyCallback(arr, callback) {
-  // Your code here
+  const new0 = arr.map( (value) => callback( value ));
+  return new0;
 }
 
 // Task 4: Promises, Async, and Await
@@ -27,7 +39,15 @@ function applyCallback(arr, callback) {
 // Create an async function called 'fetchMultipleData' that fetches data from multiple URLs concurrently using Promise.all.
 // The function should accept an array of URLs and return an array of JSON responses.
 async function fetchMultipleData(urls) {
-  // Your code here
+  try {
+    const responses = await Promise.all( urls.map( async (url) => {
+      return (await fetch(url)).json();
+    }));
+    return responses;
+    
+  } catch (error) {
+    console.log( error )
+  }
 }
 
 // Task 5: Functional Programming
@@ -35,7 +55,8 @@ async function fetchMultipleData(urls) {
 // Given an array of objects representing students, filter the students who have passed the exam (score >= 60).
 // Then, calculate the average score of the passing students using functional programming concepts.
 function averagePassingScore(students) {
-  // Your code here
+  const passStd = students.filter( (marks)=> marks.score >= 60);
+  const avgMarks = 
 }
 
 // Test Cases
