@@ -28,10 +28,9 @@ class Product {
 // Task 3: Lambda Functions
 
 // Write a function that takes an array of numbers and a callback function.
-// The callback function should be applied to each number in the array, and the result should be returned in a new0 array.
+// The callback function should be applied to each number in the array, and the result should be returned in a new array.
 function applyCallback(arr, callback) {
-  const new0 = arr.map( (value) => callback( value ));
-  return new0;
+  return arr.map( (value) => callback( value ));
 }
 
 // Task 4: Promises, Async, and Await
@@ -39,15 +38,15 @@ function applyCallback(arr, callback) {
 // Create an async function called 'fetchMultipleData' that fetches data from multiple URLs concurrently using Promise.all.
 // The function should accept an array of URLs and return an array of JSON responses.
 async function fetchMultipleData(urls) {
-  try {
-    const responses = await Promise.all( urls.map( async (url) => {
-      return (await fetch(url)).json();
-    }));
+    const responses = Promise.all(
+      urls.map( async (url) => {
+
+        const data = await fetch(url);
+        return await data.json();
+
+      }));
+
     return responses;
-    
-  } catch (error) {
-    console.log( error )
-  }
 }
 
 // Task 5: Functional Programming
@@ -55,8 +54,17 @@ async function fetchMultipleData(urls) {
 // Given an array of objects representing students, filter the students who have passed the exam (score >= 60).
 // Then, calculate the average score of the passing students using functional programming concepts.
 function averagePassingScore(students) {
-  const passStd = students.filter( (marks)=> marks.score >= 60);
-  //const avgMarks = 
+  let i = 0;
+  const marks = students.reduce( (acc , curr) => {
+    if(curr.score >= 60){
+      i += 1;
+      return acc += curr.score;
+    }
+    return acc;
+  }, 0)
+  
+  return marks /i
+  
 }
 
 // Test Cases

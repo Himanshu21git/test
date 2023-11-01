@@ -2,13 +2,9 @@
 
 // Given an array of numbers, use Array methods to find the sum of all even numbers in the array.
 function sumEvenNumbers(arr) {
- return arr.reduce( (sum , currentValue) => {
 
-    if( currentValue %2 === 0 ){
-      return sum += currentValue;
-    }
-    return sum += 0;
-  } , 0 )
+ return arr.reduce( (sum , currentValue) => currentValue %2 === 0 ? sum+= currentValue : sum ,0 )
+
 }
 
 // Task 2: Object Methods
@@ -37,7 +33,8 @@ const add = (a, b) => a + b ;
 async function fetchData(url) {
   try {
 
-    return ( await fetch( url ) ).json();
+    const data =  await fetch( url );
+    return await data.json();
 
   } catch (error) {
     console.error( error )
@@ -50,10 +47,16 @@ async function fetchData(url) {
 // the squares of the positive numbers in the original array, using functional programming concepts.
 function squarePositiveNumbers(arr) {
 
-  return arr.filter( value => value >= 0).map( value => value * value );
-
+  let result = [];
+  arr.forEach(e => fun(e ,result));
+  return result
 }
-
+function fun( val ,result){
+  if( val >= 0 ){
+    return result.push(val*val);
+  }
+}
+// arr.reduce( (totalSq , value) =>  value >= 0 ? result.push(value*value) : value,0)
 // Test Cases
 
 // Task 1 Test
