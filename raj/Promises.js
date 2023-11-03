@@ -1,5 +1,5 @@
 // **Task 1: Async Function**
-// Write an asynchronous function called `fetchData` that simulates fetching data from an API. 
+// Write an asynchronous function called `fetchData` that simulates fetching data from an API.
 // It should return a resolved promise with the data "Hello, World!" after a 1-second delay.
 async function fetchData1(){
 
@@ -13,27 +13,32 @@ async function fetchData1(){
 // **Task 2: Error Handling**
 // Modify the `fetchData` function to handle errors. If an error occurs during the data fetching process, the function should reject the promise with an error message "Failed to fetch data" after a 1-second delay.
 async function fetchData(){
-        const result = new Promise( (res , rej) => {
+    try {
+        const result = await new Promise( (res , rej) => {
             setTimeout( ()=> rej( "Failed to fetch data" ) , 1000  )
         });
         return result;
 
+    } catch (error) {
+        console.error(error)
+    }
+
 }
 
-fetchData()
-.then( (result) => console.log( result ))
-.catch( (e) => console.error(e))
+// fetchData()
+// .then( (result) => console.log( result ))
 
 
 // **Task 3: Multiple Async Calls**
 async function fetchMultipleData(urls){
-    
-        const responses =  Promise.all( 
+
+        let responses ;
+        responses = await Promise.all( 
             urls.map( async (url) => {
 
                 const data = await fetch(url);
                 return await data.json();
-        
+
         }));
         return responses;
 }
@@ -41,17 +46,18 @@ async function fetchMultipleData(urls){
 // **Task 4: Error Handling with Promise.all**
 async function fetchMultipleData(urls){
     try {
-  
-        const responses = await Promise.all( 
+
+        let responses ;
+        responses = await Promise.all(
             urls.map( async (url) => {
 
                 const data = await fetch(url);
                 return await data.json();
-        
+
         }));
-        console.log(responses)
+        console.log(typeof responses)
         return responses;
-        
+
       } catch (error) {
         console.log( "One or more requests failed." )
       }
@@ -71,11 +77,11 @@ async function datafetch(url){
 }
 async function fetchSequentialData(apis){
 try {
-    
+
     const result = [];
     for (const url of apis) {
-        
-        result.push( await datafetch(url) )
+        const data = await datafetch(url) 
+        result.push( data )
     }
     return result;
 } catch (error) {
@@ -88,6 +94,4 @@ const apis = [
     'https://jsonplaceholder.typicode.com/posts/2',
     'https://jsonplaceholder.typicode.com/posts/3',
   ];
-
-fetchSequentialData(apis)
-.then((result) => console.log(result))
+fetchSequentialData(apis).then( ( e)=> console.log(e))
