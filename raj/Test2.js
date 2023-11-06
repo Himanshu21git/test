@@ -38,7 +38,8 @@ function applyCallback(arr, callback) {
 // Create an async function called 'fetchMultipleData' that fetches data from multiple URLs concurrently using Promise.all.
 // The function should accept an array of URLs and return an array of JSON responses.
 async function fetchMultipleData(urls) {
-    const responses = Promise.all(
+    let responses;
+    responses = Promise.all(
       urls.map( async (url) => {
 
         const data = await fetch(url);
@@ -63,7 +64,7 @@ function averagePassingScore(students) {
     return acc;
   }, 0)
   
-  return marks /i
+  return marks / i;
   
 }
 
