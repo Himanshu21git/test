@@ -25,13 +25,13 @@ function throwError(message: string): never {
 
 // Create a function 'parseJSON' that takes a JSON string and returns the parsed object.
 // The input may not be valid JSON, so handle it using the 'unknown' type.
-function parseJSON(jsonString: string): unknown {
-  try {
-    const data = JSON.parse(jsonString)
-    return data;
-  } catch (error) {
-    console.log( "undefined (due to 'unknown' type)" )
+function parseJSON(jsonString: unknown): unknown {
+  
+  if( typeof jsonString !== "string"){
+    throw new Error( undefined )
   }
+  const data = JSON.parse(jsonString)
+  return data;
 }
 
 // Task 5: Any
