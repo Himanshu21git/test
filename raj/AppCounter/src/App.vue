@@ -7,6 +7,9 @@
   
   <h3 v-highlight="'red'">Task 5</h3>
   <AppForm/>
+
+  <h3 v-highlight="'red'">Task 9</h3>
+  <AppParent/>
 </template>
 
 
@@ -15,7 +18,7 @@
 import AppCounter from './components/AppCounter.vue'
 import AppList from './components/AppList.vue';
 import AppForm from './components/AppForm.vue';
-
+import AppParent from './components/AppParent.vue';
 
 </script>
 
