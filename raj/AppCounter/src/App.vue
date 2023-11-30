@@ -10,6 +10,9 @@
 
   <h3 v-highlight="'red'">Task 9</h3>
   <AppParent/>
+
+  <h3 v-highlight="'red'">Task 9</h3>
+  <Cart/>
 </template>
 
 
@@ -19,6 +22,7 @@ import AppCounter from './components/AppCounter.vue'
 import AppList from './components/AppList.vue';
 import AppForm from './components/AppForm.vue';
 import AppParent from './components/AppParent.vue';
+import Cart from './components/Cart.vue';
 
 </script>
 
