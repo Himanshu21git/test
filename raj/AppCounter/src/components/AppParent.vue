@@ -3,6 +3,7 @@
 
     <input type="text" @input="DataA = $event.target.value" placeholder="Type send data" style="color: lightseagreen">
     <p>Recive from ChildA :- <span style="color: lightseagreen">{{ DataB }}</span></p>
+
     <ChildA :Data="DataA" @ChildData="(n)=> DataB = n.toUpperCase()"/>
 
     <ChildB :ParentToChildB="DataB"/>
@@ -15,6 +16,6 @@ import { ref } from 'vue';
 
 const DataA = ref('')
 const DataB = ref('')
-const emit = defineEmits('ChildData')
+// const emit = defineEmits('ChildData')
 
 </script>

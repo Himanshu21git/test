@@ -10,6 +10,7 @@ const props = defineProps({
         default: 'Default',
     }
 })
+const emit = defineEmits(['ChildData'])
 </script>
 
 <style scoped>
