@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .effect {
+    @apply drop-shadow-3xl transform ease-in duration-300 transition-all hover:scale-90 hover:drop-shadow-sm
+  }
+}
+
+.some {
+  background: rgb(92, 92, 92);
+}
