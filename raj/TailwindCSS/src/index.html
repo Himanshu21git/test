@@ -1,0 +1,81 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="../dist/output.css" rel="stylesheet">
+  <title>Tailwind CSS Test</title>
+</head>
+
+<body>
+<!--    NavBar & Heading   -->
+  <div class="w-screen h-16 px-10 bg-blue-300 text-3xl flex items-center place-content-between border-b-2 border-slate-500 dark:bg-sky-950 dark:text-white">
+    <button class="rounded-3xl bg-red-600 text-lg px-4 hover:animate-bounce">Hover Me</button>
+    <p class="font-extrabold">Tailwind CSS Test</p>
+    <button id="btn" class="text-white rounded-full bg-black text-lg p-2 dark:bg-slate-200 dark:text-black " onclick="darkmod()">Dark</button>
+  </div>
+
+<!--    container  -->
+  <div class="h-screen w-screen bg-slate-200 flex flex-wrap place-content-evenly flex-col sm:flex-row dark:bg-gray-500">
+  
+<!--  Items 1 -->
+    <div class="h-1/2 w-1/5 bg-slate-600  flex flex-col rounded-3xl effect dark:drop-shadow-b">
+      <div class="h-[100%] w-[100%] ">
+        <img class="rounded-t-2xl object-cover h-[100%] w-[100%]" src="https://images.unsplash.com/photo-1581655353564-df123a1eb820?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+      </div>
+      <div class=" bg-white px-3">
+        <p class="font-extrabold text-slate-600">White T-Shirt</p>
+        <p>Pure White Slim Fit White T-shirt (round neck)</p>
+      </div>
+    </div>
+
+<!--  Items 2 -->
+    <div class="h-1/2 w-1/5 bg-slate-600 flex flex-col rounded-3xl effect dark:drop-shadow-b">
+      <div class="h-[100%] w-[100%]">
+        <img class="rounded-t-2xl object-cover h-[100%] w-[100%]" src="https://images.unsplash.com/photo-1552066379-28c8af6900a7?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+      </div>
+      <div class=" bg-white px-3">
+        <p class="font-extrabold text-slate-600">Yellow T-Shirt</p>
+        <p>Yellow Slim Fit Whodunelson T-shirt (round neck)</p>
+      </div>
+    </div>
+
+<!--  Items 3 -->
+    <div class="h-1/2 w-1/5 bg-slate-600 flex flex-col rounded-3xl effect dark:drop-shadow-b">
+      <div class="h-[100%] w-[100%]">
+        <img class="rounded-t-2xl object-cover h-[100%] w-[100%]" src="https://images.unsplash.com/photo-1602810318660-d2c46b750f88?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+      </div>
+      <div class=" bg-white px-3">
+        <p class="font-extrabold text-slate-600">Mehroon Check Shirt</p>
+        <p>Mehroon Single pocket shirt ( Pure coton )</p>
+      </div>
+    </div>
+
+<!--  Items 4 -->
+    <div class="h-1/2 w-1/5 bg-slate-600 flex flex-col rounded-3xl effect dark:drop-shadow-b">
+      <div class="h-[100%] w-[100%]">
+        <img class="rounded-t-2xl object-cover h-[100%] w-[100%] " src="https://images.unsplash.com/photo-1618354691373-d851c5c3a990?q=80&w=2030&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+      </div>
+      <div class=" bg-white px-3">
+        <p class="font-extrabold text-slate-600">Black T-Shirt</p>
+        <p>Pure Black Slim Fit Heavy Febric T-shirt</p>
+      </div>
+    </div>
+  </div>
+
+
+<script>
+
+  let isdark = false
+  function darkmod(){
+    document.documentElement.classList.toggle('dark')
+    document.getElementById('btn').innerHTML = isdark ? 'dark': 'light'
+    isdark = !isdark;
+  }
+
+</script>
+</body>
+
+
+</html>

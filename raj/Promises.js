@@ -38,7 +38,6 @@ async function fetchMultipleData(urls){
 
                 const data = await fetch(url);
                 return await data.json();
-
         }));
         return responses;
 }

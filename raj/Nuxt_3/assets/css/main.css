@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+      .btn {
+            @apply px-4 py-1 border rounded-2xl drop-shadow-btn 
+      }
+
+      .center {
+            @apply flex justify-center items-center
+      }
+
+      .effect {
+            @apply drop-shadow-sm transform ease-in duration-200 transition-all hover:scale-105 hover:drop-shadow-3xl
+      }
+      .boxsdo{
+      text-shadow: 0 0 10px rgb(76, 187, 221),
+      0 0 15px rgb(76, 187, 221),
+      0 0 20px rgb(76, 187, 221),
+      0 0 25px rgb(76, 187, 221);
+}
+}
