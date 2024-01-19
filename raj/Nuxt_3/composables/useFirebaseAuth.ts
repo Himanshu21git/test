@@ -29,7 +29,7 @@ export const useAddEmailPass = (email: string, password: string, Fname:string, L
 
                   await updateProfile(userCredential.user, { displayName: Fname +" "+ Lname })
                   alert(`${userCredential.user.displayName} Register successfull `)
-                  await navigateTo('/login')
+                  await navigateTo('/en/login')
 
             })
             .catch((e) => {
@@ -44,7 +44,7 @@ export const useLoginWithEmailPass = (email: string, password: string) => {
       const userAuth = useUserAuthStore()
       signInWithEmailAndPassword(auth, email, password)
             .then(async(currentUser) => {
-                  await navigateTo("/")
+                  await navigateTo("/en/")
                   alert( `${ currentUser.user.displayName } Login successfull !!` )
                   // userAuth.userName = currentUser.user.displayName as string
                   userAuth.login()

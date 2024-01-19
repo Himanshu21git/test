@@ -8,7 +8,7 @@
                   </h2>
                   <p class="mt-2 text-center text-sm text-gray-600 max-w">
                         {{ $t(`Or`) }}
-                        <NuxtLink to="/login" class="font-medium text-blue-700 hover:text-blue-800">
+                        <NuxtLink :to="localePath('login')" class="font-medium text-blue-700 hover:text-blue-800">
                               {{ $t(`Login`) }}
                         </NuxtLink>
                   </p>
@@ -106,6 +106,8 @@ const mediaImg = [
       "https://www.svgrepo.com/show/513008/twitter-154.svg",
       "https://www.svgrepo.com/show/506498/google.svg",
 ]
+
+const localePath = useLocalePath()
 const newUser = ref({
       email: '',
       password: '',
